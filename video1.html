@@ -1,13 +1,91 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		<video width="1000" controls="controls>" 
-					<source src="img/vlog2.mp4" type="video/mp4">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>不凡游泳</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<!-- Owl Carousel-->
+<link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.css">
+<link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.css">
+<!-- Modal Video-->
+<link rel="stylesheet" href="vendor/modal-video/css/modal-video.min.css">
+<!-- Google fonts-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600,800&amp;display=swap">
+<!-- Device Mockup-->
+<link rel="stylesheet" href="css/device-mockups.css">
+<!-- theme stylesheet-->
+<link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="css/custom.css">
+<!-- Favicon-->
+<link rel="shortcut icon" href="img/favicon.png">
+<!-- Tweaks for older IEs--><!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- navbar-->
+<header class="header">
+  <nav class="navbar navbar-expand-lg fixed-top">
+	<div class="container"><a class="navbar-brand" href="#"></a>
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+		  <li class="nav-item"><a class="nav-link link-scroll active" href="#hero">不凡 <span class="sr-only">(current)</span></a></li>
+		  <li class="nav-item"><a class="nav-link link-scroll" href="#about">我们承诺</a></li>
+		  <li class="nav-item"><a class="nav-link link-scroll" href="#services">往期学员视频</a></li>
+		  <li class="nav-item"><a class="nav-link link-scroll" href="#testimonials">联系我们</a></li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+</header>
+<!-- Hero Section-->
+
+  <section class="with-pattern-1" id="services">
+	<div class="container">
+	  <div class="row align-items-center mb-5">
+		<div class="col-lg-6 mb-5 mb-lg-0"><video width="100%"  controls="controls>" 
+					<source src="img/youyong.mp4" type="video/mp4">
 					</source> 
-				</video>
-	</body>
+				</video></div>
+ <a href="index.html"> <button type="button" class="btn btn-primary" ><i class="fas fa-play-circle mr-2"></i>返回</button></a>
+	
+</section><a class="scropll-top-btn" id="scrollTop" href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+
+<!-- JavaScript files-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+<script src="vendor/modal-video/js/modal-video.js"></script>
+<script src="js/front.js"></script>
+<script>
+
+  function injectSvgSprite(path) {
+  
+	  var ajax = new XMLHttpRequest();
+	  ajax.open("GET", path, true);
+	  ajax.send();
+	  ajax.onload = function(e) {
+	  var div = document.createElement("div");
+	  div.className = 'd-none';
+	  div.innerHTML = ajax.responseText;
+	  document.body.insertBefore(div, document.body.childNodes[0]);
+	  }
+  }
+  // this is set to BootstrapTemple website as you cannot 
+  // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+  // while using file:// protocol
+  // pls don't forget to change to your domain :)
+  injectSvgSprite('img/orion-svg-sprite.svg'); 
+  
+</script>
+<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</body>
 </html>
